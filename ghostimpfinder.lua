@@ -44,7 +44,7 @@ while API.Read_LoopyLoop() do
             API.WaitUntilMovingEnds()
             API.RandomSleep2(1800, 2000, 1600)
 
-            local interactionTimeout = os.time() + 60 -- 1 minute timeout
+            local interactionTimeout = os.time() + 60 
             while API.CheckAnim(60) and os.time() < interactionTimeout do
                 print("Waiting for interaction animation to complete")
                 API.RandomSleep2(1800, 2000, 1600)
@@ -62,7 +62,7 @@ while API.Read_LoopyLoop() do
                     if currentIndex == lastIteratedWorldIndex then
                         currentIndex = currentIndex + 1
                         if currentIndex > #worldlist then
-                            currentIndex = 1 -- Reset back to the first world
+                            currentIndex = 1 
                             print("Resetting to first world in list")
                         end
                     end
@@ -83,7 +83,7 @@ while API.Read_LoopyLoop() do
                 API.WaitUntilMovingEnds()
                 API.RandomSleep2(1800, 2000, 1600)
 
-                local interactionTimeout = os.time() + 60 -- 1 minute timeout
+                local interactionTimeout = os.time() + 60
                 while API.CheckAnim(60) and os.time() < interactionTimeout do
                     print("Waiting for interaction animation to complete")
                     API.RandomSleep2(1800, 2000, 1600)
@@ -98,8 +98,6 @@ while API.Read_LoopyLoop() do
         end
     else
         print("Not in game. Attempting to log in...")
-        -- Add logic here to attempt logging in or navigating to the game world
-        -- For now, we'll just wait
         API.RandomSleep2(4800, 2000, 2600)
     end
 
