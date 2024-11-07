@@ -101,5 +101,5 @@ while API.Read_LoopyLoop() do
         API.RandomSleep2(4800, 2000, 2600)
     end
 
-    API.RandomSleep2(1000, 0, 400) -- Small delay between iterations to prevent excessive CPU usage
+    API.RandomSleep2(1000, 0, 400)
 end
